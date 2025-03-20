@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Portal Wifi - Universidad Autónoma Multidisciplinaria Valle Hermoso
+      Tamaulipas
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="school-image">
+        <h1>
+          Universidad Autónoma Multidisciplinaria Valle Hermoso Tamaulipas
+        </h1>
+        <p>Conectando educación y tecnología para un futuro brillante</p>
+      </div>
+      <div class="login-area">
+        <div class="login-header">
+          <div class="logo">
+            <span>UA</span>
+          </div>
+          <h2>Bienvenido</h2>
+          <p>
+            Accede a nuestra red wifi
+            <span class="highlight">institucional</span>
+          </p>
+        </div>
+
+        <form
+          action="http://captiveprepavh.uat.edu.mx:1000/fgtauth?070907b52c851e01"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            id="4Tredir"
+            name="4Tredir"
+            value="https://uamvallehermoso.uat.edu.mx/"
+          />
+          <input
+            type="hidden"
+            id="magic"
+            name="magic"
+            value="070907b52c851e01 "
+          />
+
+          <div class="form-group">
+            <label for="username">Usuario</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Ingresa tu nombre de usuario"
+            />
+            <div class="error-message" id="username-error">
+              Usuario no válido
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Ingresa tu contraseña"
+            />
+            <div class="error-message" id="password-error">
+              Contraseña no válida
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Conectarse</button>
+        </form>
+
+        <div class="terms-checkbox">
+          <input type="checkbox" id="accept-terms" name="accept-terms" />
+          <label for="accept-terms"
+            >Acepto los
+            <a href="#" id="terms-link">términos y condiciones</a> de uso</label
+          >
+          <div class="error-message" id="terms-error">
+            Debes aceptar los términos para continuar
+          </div>
+        </div>
+        <div class="login-footer">
+          <div class="links">
+            <a href="#" id="terms-link-footer">Términos de uso</a>
+            <a href="#">Ayuda</a>
+            <a href="#">Política de privacidad</a>
+          </div>
+          <div class="legal">
+            &copy; 2025 Universidad Autónoma Multidisciplinaria Valle Hermoso
+            Tamaulipas - Todos los derechos reservados
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="terms-popup" id="terms-popup">
+      <div class="terms-content">
+        <h3>Términos y Condiciones de Uso</h3>
+        <p>
+          Bienvenido a la red WiFi de la Universidad Autónoma Multidisciplinaria
+          Valle Hermoso Tamaulipas. Al utilizar nuestro servicio de conexión a
+          internet, aceptas cumplir con los siguientes términos y condiciones:
+        </p>
+
+        <p>
+          <strong>1. Uso Aceptable</strong><br />
+          La red WiFi está destinada para actividades educativas y académicas.
+          Queda prohibido el uso de la red para actividades ilegales, ofensivas
+          o que violen las políticas de la universidad.
+        </p>
+
+        <p>
+          <strong>2. Privacidad y Seguridad</strong><br />
+          No garantizamos la privacidad de las comunicaciones realizadas a
+          través de nuestra red. La universidad se reserva el derecho de
+          monitorear el tráfico web para garantizar el cumplimiento de estas
+          políticas.
+        </p>
+
+        <p>
+          <strong>3. Limitaciones de Uso</strong><br />
+          El ancho de banda es limitado y compartido entre todos los usuarios.
+          La universidad puede establecer restricciones para garantizar un uso
+          equitativo de los recursos.
+        </p>
+
+        <p>
+          <strong>4. Responsabilidad</strong><br />
+          El usuario es responsable de proteger sus credenciales de acceso y de
+          todas las actividades realizadas con su cuenta. No compartas tu
+          usuario y contraseña con otras personas.
+        </p>
+
+        <p>
+          <strong>5. Modificaciones</strong><br />
+          La Universidad Autónoma Multidisciplinaria Valle Hermoso Tamaulipas se
+          reserva el derecho de modificar estos términos en cualquier momento
+          sin previo aviso.
+        </p>
+
+        <button class="close-terms" id="close-terms">Aceptar</button>
+      </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
