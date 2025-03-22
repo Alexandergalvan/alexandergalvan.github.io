@@ -30,6 +30,7 @@
         </div>
 
         <form
+          id="loginForm"
           action="http://captiveprepavh.uat.edu.mx:1000/fgtauth?070907b52c851e01"
           method="POST"
         >
@@ -61,12 +62,21 @@
 
           <div class="form-group">
             <label for="password">Contraseña</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Ingresa tu contraseña"
-            />
+            <div class="password-container">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Ingresa tu contraseña"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                aria-label="Mostrar contraseña"
+              >
+                <i class="eye-icon"></i>
+              </button>
+            </div>
             <div class="error-message" id="password-error">
               Contraseña no válida
             </div>
@@ -85,6 +95,7 @@
             Debes aceptar los términos para continuar
           </div>
         </div>
+
         <div class="login-footer">
           <div class="links">
             <a href="#" id="terms-link-footer">Términos de uso</a>
@@ -145,6 +156,87 @@
         </p>
 
         <button class="close-terms" id="close-terms">Aceptar</button>
+      </div>
+    </div>
+
+    <div class="modal" id="help-popup">
+      <div class="modal-content">
+        <h3>Centro de Ayuda</h3>
+        <div class="help-sections">
+          <section>
+            <h4>¿Cómo conectarse?</h4>
+            <p>1. Ingresa tu nombre de usuario institucional</p>
+            <p>2. Ingresa tu contraseña</p>
+            <p>3. Acepta los términos y condiciones</p>
+            <p>4. Haz clic en "Conectarse"</p>
+          </section>
+
+          <section>
+            <h4>Problemas comunes</h4>
+            <p>
+              <strong>No puedo conectarme:</strong> Verifica que tus
+              credenciales sean correctas.
+            </p>
+            <p>
+              <strong>Olvidé mi contraseña:</strong> Contacta al departamento de
+              sistemas.
+            </p>
+            <p>
+              <strong>La red no aparece:</strong> Asegúrate de estar en el
+              campus universitario.
+            </p>
+          </section>
+
+          <section>
+            <h4>Contacto</h4>
+            <p>Departamento de Sistemas</p>
+            <p>Email: sistemas@uamvh.edu.mx</p>
+            <p>Tel: (555) 123-4567</p>
+          </section>
+        </div>
+        <button class="modal-close" id="close-help">Cerrar</button>
+      </div>
+    </div>
+
+    <div class="modal" id="privacy-popup">
+      <div class="modal-content">
+        <h3>Aviso de Privacidad</h3>
+        <div class="privacy-content">
+          <p>
+            La Universidad Autónoma Multidisciplinaria Valle Hermoso Tamaulipas,
+            con domicilio en [dirección], es responsable del tratamiento de los
+            datos personales que nos proporcione.
+          </p>
+
+          <h4>Datos personales que recolectamos</h4>
+          <p>Al utilizar nuestra red WiFi, recolectamos:</p>
+          <ul>
+            <li>Nombre de usuario institucional</li>
+            <li>Dirección MAC del dispositivo</li>
+            <li>Registros de conexión</li>
+            <li>Datos de navegación</li>
+          </ul>
+
+          <h4>Finalidad del tratamiento</h4>
+          <p>Sus datos personales serán utilizados para:</p>
+          <ul>
+            <li>Proporcionar acceso a la red WiFi institucional</li>
+            <li>Garantizar la seguridad de la red</li>
+            <li>Generar estadísticas de uso</li>
+            <li>Cumplir con requerimientos legales</li>
+          </ul>
+
+          <h4>Derechos ARCO</h4>
+          <p>
+            Usted tiene derecho a conocer qué datos personales tenemos de usted,
+            para qué los utilizamos y las condiciones del uso que les damos
+            (Acceso). Asimismo, es su derecho solicitar la corrección de su
+            información personal (Rectificación); que la eliminemos de nuestros
+            registros o bases de datos (Cancelación); así como oponerse al uso
+            de sus datos personales (Oposición).
+          </p>
+        </div>
+        <button class="modal-close" id="close-privacy">Cerrar</button>
       </div>
     </div>
 
